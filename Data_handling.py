@@ -11,7 +11,7 @@ from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunct
 # --- ChromaDB Initialization (Keep as is) ---
 # Initialize embedding function and chroma client
 embedding_fn = SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
-client = chromadb.Client(Settings(chroma_db_impl="duckdb"))
+chroma_client = chromadb.HttpClient(host="api.chroma.dev", port=443, ssl=True)
 
 
 
