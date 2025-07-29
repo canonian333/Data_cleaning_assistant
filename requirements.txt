@@ -4,5 +4,5 @@ numpy
 matplotlib
 seaborn
 scipy
-chromadb[http]
+chromadb[server]
 sentence-transformers
