@@ -11,7 +11,8 @@ from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunct
 # --- ChromaDB Initialization (Keep as is) ---
 # Initialize embedding function and chroma client
 embedding_fn = SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
-chroma_client = chromadb.Client(Settings(chroma_db_impl="duckdb+parquet", persist_directory=".chromadb"))
+client = chromadb.Client(Settings(chroma_db_impl="duckdb"))
+
 
 
 # Delete existing collection if exists
